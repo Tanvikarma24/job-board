@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "Tech Co",
+    "location": "Remote",
+    "description": "Build and maintain Angular applications."
+  },
+  {
+    "id": 2,
+    "title": "Angular Engineer",
+    "company": "Code Solutions",
+    "location": "Bangalore",
+    "description": "Work on dynamic web apps using Angular and RxJS."
+  }
+  
+]
