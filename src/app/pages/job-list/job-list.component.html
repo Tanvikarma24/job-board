@@ -1,7 +1,16 @@
-<div *ngFor="let job of jobs" class="job-card">
-    <mat-card>
-        <mat-card-title>{{ job.title }}</mat-card-title>
-        <mat-card-subtitle>{{ job.company }} — {{ job.location }}</mat-card-subtitle>
-        <mat-card-content><p>{{ job.description }}</p></mat-card-content>
-    </mat-card>
+<mat-form-field class="full-width" appearance="fill">
+  <mat-label>Search Job Titles</mat-label>
+  <input matInput [formControl]="searchControl" placeholder="e.g. Angular Developer">
+</mat-form-field>
+
+<div *ngIf="filteredJobs.length === 0">No jobs found.</div>
+
+<div *ngFor="let job of filteredJobs" class="job-card">
+  <mat-card>
+    <mat-card-title>{{ job.title }}</mat-card-title>
+    <mat-card-subtitle>{{ job.company }} — {{ job.location }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ job.description }}</p>
+    </mat-card-content>
+  </mat-card>
 </div>
